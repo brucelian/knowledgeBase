@@ -1,25 +1,22 @@
-这个项目对我的意义：
-1、学写说明文档
-2、学安装引导程序
-还需要做：
-1、美化一键入库页UI
-2、美化视频详情页……
-2、完善 bruce:// 协议，bat文件
-3、随机时会硬筹够15个的bug
-4、有图|无图……过滤方式
-5、edit_video 中修改 storyline 物理路径
-6、共享版 edit_video 没有移动复制功能
+# knowledgeBase
+管理个人知识库
+基于CodeIgniter框架
+系统运行环境 PHP+MySQL
 
+## 开发初衷：
+收藏了很多东西，但是不会再去看。
+	随机浏览。自定义配置。
+收藏了很多东西，但是找不到。
+	基于标签检索
+收藏了很多在浏览器收藏夹。但用的时候却发现404了。
+	离线保存原版网页，防止404。
 
+![avatar](./demo/主界面.png)
 
+# 在线演示
+http://www.youku.com/brucelian
 
-修改系统名后，需要做：
-1、congif.php							$config['base_url']	= 'http://localhost:2018/L_base/';
-
-
-
-
-演示：
+功能演示：
 1、一键入库（mhtml）
 2、随机列表
 3、插入新标签
@@ -32,64 +29,13 @@
 10、完整|精简|小精简
 11、storyline
 
-
-
-
-
-# knowledgeBase
-管理个人知识库
-
-## 主要特性
-基于CodeIgniter框架
-系统运行环境 PHP+MySQL
-
+## 功能介绍
+标签管理
 
 ## 安装步骤
 一、按引导程序填写配置
 	数据库用户名、数据库密码、数据库名称、数据表前缀
 	仓库路径
-
-二、【系统自动】
-	生成 tag_circle：1=>knowledge
-	设置 config.php
-		$kms_dir = '';
-	修改 database.php：
-		'database' => '',
-		'dbprefix' => '',
-	生成注册表文件
-		获取当前物理路径
-
-四、运行注册表
-
-
-![avatar](./demo/主界面.png)
-
-
-（ffmpeg）
-
-## 说明
- 将下载的 mhtml、mp4、mp3、doc 等文件放入 _up 文件夹
- 修改Chrome设置为mhtml单文件
-
-## 功能介绍
-标签管理
-
-二维码（目前仅mhtml文件）
-
-range设置
-
-删除文件
-
-修改标题
-
-备注
-
-一键入库
-
-随机15篇
-
-# 在线演示
-http://www.youku.com/brucelian
 
 # 安装步骤
 
@@ -213,10 +159,37 @@ system/core/Common.php
 		}
 
 
+二、【系统自动】
+	生成 tag_circle：1=>knowledge
+	设置 config.php
+		$kms_dir = '';
+	修改 database.php：
+		'database' => '',
+		'dbprefix' => '',
+	生成注册表文件
+		获取当前物理路径
 
+修改系统名后，需要做：
+1、congif.php							$config['base_url']	= 'http://localhost:2018/L_base/';
 
+四、运行注册表
 
+（ffmpeg）
 
+## 说明
+ 将下载的 mhtml、mp4、mp3、doc 等文件放入 _up 文件夹
+ 修改Chrome设置为mhtml单文件
 
-<strong>{elapsed_time}</strong> seconds. 
-		<?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
+二维码（目前仅mhtml文件）
+
+range设置
+
+删除文件
+
+修改标题
+
+备注
+
+一键入库
+
+随机15篇
